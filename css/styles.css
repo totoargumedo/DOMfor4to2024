@@ -110,3 +110,9 @@ svg {
     font-size: 10px;
   }
 }
+
+.titulo-principal {
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+}

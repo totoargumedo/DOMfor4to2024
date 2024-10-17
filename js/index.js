@@ -1,114 +1,14 @@
-const pokemones = [
-  {
-    numero: 1,
-    nombre: "Bulbasaur",
-    descripcion:
-      "Bulbasaur es un Pokémon de tipo planta/veneno introducido en la primera generación. Es uno de los Pokémon iniciales que puede elegir el jugador al comenzar su aventura en los videojuegos Pokémon Rojo y Pokémon Azul.",
-    imagen: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-    tipo: ["planta", "veneno"],
-    nivel: 1,
-    capturable: true,
-    generacion: "Primera",
-    evolucion: "Ivysaur",
-    debilidad: "fuego, hielo, volador, psíquico",
-    resistencia: "agua, eléctrico, planta, lucha",
-  },
-  {
-    numero: 25,
-    nombre: "Pikachu",
-    descripcion:
-      "Un pequeño roedor eléctrico conocido por su habilidad para almacenar electricidad en sus mejillas. Es el compañero de aventuras de Ash Ketchum.",
-    imagen: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
-    tipo: ["Eléctrico"],
-    nivel: 5,
-    capturable: true,
-    generacion: "Primera",
-    evolucion: "Raichu",
-    debilidad: ["Tierra"],
-    resistencia: ["Vuelo", "Acero", "Eléctrico"],
-  },
-  {
-    numero: 150,
-    nombre: "Mew",
-    descripcion:
-      "Un Pokémon legendario que se dice que contiene los genes de todos los Pokémon. Es muy raro de encontrar.",
-    imagen: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png",
-    tipo: ["Psíquico"],
-    nivel: 100,
-    capturable: true,
-    generacion: "Primera",
-    evolucion: "",
-    debilidad: ["Bicho", "Fantasma", "Siniestro"],
-    resistencia: ["Lucha", "Veneno"],
-  },
-  {
-    numero: 252,
-    nombre: "Chikorita",
-    descripcion:
-      "Un Pokémon de tipo Planta que tiene una hoja en la cabeza. Se dice que crece más grande y más bonita cuanto más feliz está.",
-    imagen: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/252.png",
-    tipo: ["Planta"],
-    nivel: 5,
-    capturable: true,
-    generacion: "Segunda",
-    evolucion: "Bayleef",
-    debilidad: ["Fuego", "Hielo", "Veneno", "Volador", "Bicho"],
-    resistencia: ["Agua", "Tierra", "Eléctrico", "Planta"],
-  },
-  {
-    numero: 159,
-    nombre: "Typhlosion",
-    descripcion:
-      "Un Pokémon de tipo Fuego que posee una llama ardiente en la punta de la cola. Su cuerpo está envuelto en llamas, lo que le otorga un aspecto imponente.",
-    imagen: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/159.png",
-    tipo: ["Fuego"],
-    nivel: 36,
-    capturable: true,
-    generacion: "Segunda",
-    evolucion: "",
-    debilidad: ["Agua", "Roca", "Tierra"],
-    resistencia: ["Fuego", "Hierba", "Hielo", "Acero", "Insecto", "Hada"],
-  },
-  {
-    numero: 250,
-    nombre: "Totodile",
-    descripcion:
-      "Un Pokémon de tipo Agua que posee una mandíbula poderosa. Vive en ríos y lagos, donde caza a sus presas con agilidad.",
-    imagen: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/250.png",
-    tipo: ["Agua"],
-    nivel: 5,
-    capturable: true,
-    generacion: "Segunda",
-    evolucion: "Croconaw",
-    debilidad: ["Eléctrico", "Hierba"],
-    resistencia: ["Fuego", "Hielo", "Acero", "Agua"],
-  },
-  {
-    numero: 100,
-    nombre: "Gengar",
-    descripcion:
-      "Un Pokémon de tipo Fantasma/Veneno conocido por sus travesuras y su habilidad para atravesar paredes. Se dice que se alimenta de las almas de los vivos.",
-    imagen: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/100.png",
-    tipo: ["Fantasma", "Veneno"],
-    nivel: 25,
-    capturable: true,
-    generacion: "Primera",
-    evolucion: "",
-    debilidad: ["Hada", "Psíquico"],
-    resistencia: ["Lucha", "Bicho", "Veneno"],
-  },
-  {
-    numero: 151,
-    nombre: "Mewtwo",
-    descripcion:
-      "Un Pokémon legendario creado en un laboratorio. Es conocido por su inmensa fuerza psíquica y su naturaleza solitaria.",
-    imagen: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png",
-    tipo: ["Psíquico"],
-    nivel: 100,
-    capturable: true,
-    generacion: "Primera",
-    evolucion: "",
-    debilidad: ["Bicho", "Fantasma", "Siniestro"],
-    resistencia: ["Lucha", "Veneno"],
-  },
-];
+//Capturar el elemento con la clase "main-container" y almacenarlo en una variable.
+let contenedorPrincipal = document.querySelector(".main-container");
+
+//Crear un elemento h1 y almacenarlo en una variable.
+let titulo = document.createElement("h1");
+//Asignar el texto "Hello World" al elemento h1.
+titulo.innerText = "Hello World";
+titulo.classList.add("titulo-principal");
+// titulo.classList = "titulo-principal";
+// titulo.style.color = "red";
+//Borrar el contenido del contenedor
+contenedorPrincipal.innerHTML = "";
+//Agregar el elemento h1 al contenedor principal.
+contenedorPrincipal.appendChild(titulo);
