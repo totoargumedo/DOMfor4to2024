@@ -69,6 +69,7 @@ svg {
   align-items: center;
   margin: 10px auto;
   background-color: #fff;
+  height: fit-content;
 }
 
 .footer-container {

@@ -37,6 +37,3 @@ tarjeta.appendChild(tipo);
 //seleccionamos el contenedor principal y agregamos la tarjeta
 let galeria = document.querySelector(".main-container");
 galeria.appendChild(tarjeta);
-
-//Mostramos la
-console.log(tarjeta);
