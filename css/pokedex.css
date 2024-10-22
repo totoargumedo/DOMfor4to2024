@@ -20,6 +20,9 @@
   font-weight: 500;
   margin-left: 10px;
 }
+.card-texto {
+  font-size: 6px;
+}
 .card-type {
   font-size: 8px;
   width: 100%;

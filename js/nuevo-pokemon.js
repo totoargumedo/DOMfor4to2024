@@ -1,61 +1,49 @@
-// const formulario = document.querySelector("#pokemon-form");
+const formulario = document.querySelector("#pokemon-form");
 
-// formulario.onsubmit = function (event) {
-//   event.preventDefault();
+formulario.onsubmit = function (event) {
+  event.preventDefault();
 
-//   const numero = document.querySelector("#pokemon-numero").value;
-//   const nombre = document.querySelector("#pokemon-nombre").value;
-//   const descripcion = document.querySelector("#pokemon-descripcion").value;
-//   const imagen = document.querySelector("#pokemon-imagen").value;
-//   const nivel = document.querySelector("#pokemon-nivel").value;
-//   const generacion = document.querySelector("#pokemon-generacion").value;
+  const numero = document.querySelector("#pokemon-numero").value;
+  const nombre = document.querySelector("#pokemon-nombre").value;
+  const descripcion = document.querySelector("#pokemon-descripcion").value;
+  const imagen = document.querySelector("#pokemon-imagen").value;
+  const nivel = document.querySelector("#pokemon-nivel").value;
+  const generacion = document.querySelector("#pokemon-generacion").value;
 
-//   const pokemon = {
-//     numero: numero,
-//     nombre: nombre,
-//     descripcion: descripcion,
-//     imagen: imagen,
-//     nivel: nivel,
-//     generacion: generacion,
-//   };
+  const pokemon = {
+    numero: numero,
+    nombre: nombre,
+    descripcion: descripcion,
+    imagen: imagen,
+    nivel: nivel,
+    generacion: generacion,
+  };
+  pokemones.push(pokemon);
+  llenarTablaPokemon(pokemones);
+};
 
-//   pokemones.push(pokemon);
+function llenarTablaPokemon(baseDeDatos) {
+  for (let i = 0; i < baseDeDatos.length; i++) {
+    crearFilaPokemon(baseDeDatos[i]);
+  }
+}
 
-//   mostrarPokemon(pokemon);
-//   formulario.reset();
-//   document.querySelector("#pokemon-numero").focus();
-// };
+function crearFilaPokemon(pokemon) {
+  const filaPokemon = document.createElement("tr");
+  const celdaNumero = document.createElement("td");
+  celdaNumero.innerText = pokemon.numero;
+  filaPokemon.appendChild(celdaNumero);
+  const celdaNombre = document.createElement("td");
+  celdaNombre.innerText = pokemon.nombre;
+  filaPokemon.appendChild(celdaNombre);
+  const celdaDescripcion = document.createElement("td");
+  celdaDescripcion.innerText = pokemon.descripcion;
+  filaPokemon.appendChild(celdaDescripcion);
+  const celdaImagen = document.createElement("td");
+  celdaImagen.innerText = pokemon.imagen;
+  filaPokemon.appendChild(celdaImagen);
+  const tablaPokemon = document.querySelector("#pokemon-tabla");
+  tablaPokemon.appendChild(filaPokemon);
+}
 
-// function renderTabla(baseDeDatos) {
-//   for (let i = 0; i < baseDeDatos.length; i++) {
-//     mostrarPokemon(baseDeDatos[i]);
-//   }
-// }
-
-// function mostrarPokemon(pokemon) {
-//   let fila = document.createElement("tr");
-//   let celdaNumero = document.createElement("td");
-//   celdaNumero.innerText = pokemon.numero;
-//   let celdaNombre = document.createElement("td");
-//   celdaNombre.innerText = pokemon.nombre;
-//   let celdaDescripcion = document.createElement("td");
-//   celdaDescripcion.innerText = pokemon.descripcion;
-//   let celdaImagen = document.createElement("td");
-//   celdaImagen.innerText = pokemon.imagen;
-//   let celdaNivel = document.createElement("td");
-//   celdaNivel.innerText = pokemon.nivel;
-//   let celdaGeneracion = document.createElement("td");
-//   celdaGeneracion.innerText = pokemon.generacion;
-
-//   fila.appendChild(celdaNumero);
-//   fila.appendChild(celdaNombre);
-//   fila.appendChild(celdaDescripcion);
-//   fila.appendChild(celdaImagen);
-//   fila.appendChild(celdaNivel);
-//   fila.appendChild(celdaGeneracion);
-
-//   let tabla = document.querySelector("#pokemon-tabla");
-//   tabla.appendChild(fila);
-// }
-
-// renderTabla(pokemones);
+llenarTablaPokemon(pokemones);
